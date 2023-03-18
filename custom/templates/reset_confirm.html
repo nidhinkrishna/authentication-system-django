@@ -1,0 +1,9 @@
+Enter the New password.
+<br>
+
+Enter your new password twice .
+<form action="" method="post">
+    {% csrf_token %}
+     {{form.as_p}}
+     <button>Confirm</button>
+</form>
