@@ -1,0 +1,15 @@
+{% for message in messages  %}
+    {{message}}
+    
+    {% endfor %}
+
+<form action="" method='POST'>
+    {% csrf_token %}
+    <label for="">Email</label>
+    <input type="text" id='username' name='email'>
+    <label for="">password</label>
+    <input type="password" id='password' name='password'>
+    <button>Submit</button>
+
+</form>
+<p>New User <a href="{% url 'signup' %}">Signup</a></p>
