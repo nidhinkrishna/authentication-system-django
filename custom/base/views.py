@@ -103,7 +103,7 @@ def loginpage(request):
             login(request,user)
             messages.success(request,'login success')
             return redirect('/')
-        messages.error(request,'User not found')
+        messages.error(request,'Username or password is incorrect')
           
         
     return render(request,'login.html')

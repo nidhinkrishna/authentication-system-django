@@ -1,9 +1,15 @@
-<p>Enter the New password.</p>
-<br>
+{% extends 'resetbase.html' %}
+{% block content %}
 
-<p>Enter your new password twice </p>
-<form action="" method="post">
-    {% csrf_token %}
-     {{form.as_p}}
-     <button>Confirm</button>
-</form>
+<div class="container">
+    <p>Enter the New password. <br>
+
+
+        Enter your new password twice </p>
+        <form action="" method="post">
+            {% csrf_token %}
+             {{form.as_p}}
+             <button>Confirm</button>
+        </form>
+</div>
+{% endblock content %}
