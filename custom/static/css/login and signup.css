@@ -1,0 +1,67 @@
+:root{
+    --mainbg: linear-gradient(to right, #061161c9, #780206);
+}
+body{
+    font-family: monospace;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px;
+    /* background-color: aqua; */
+    background: var(--mainbg);
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-family: monospace;
+    color: aliceblue;
+}
+.container input{
+    display: block;
+    width: 290px;
+    height: 30px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    font-size: 17px;
+
+}
+.container label{
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+.container button{
+    height: 30px;
+    width: 60px;
+    transition: 1s;
+}
+.container a{
+    text-decoration: none;
+    color: white;
+}
+.footers{
+    font-size: large;
+    margin-top: 20px;
+    display: block;
+}
+
+.container button:hover{
+    width: 80px;
+    font-size: 14px;
+    cursor: pointer;
+  
+}
+.messages{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    background: var(--mainbg);
+    color: white;
+    padding: 10px 20px;
+
+}
+

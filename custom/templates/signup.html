@@ -1,10 +1,12 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static '/css/login and signup.css' %}">
     <style>
         label{
             display:block
@@ -12,17 +14,32 @@
     </style>
 </head>
 <body>
+    {% for message in messages  %}
+    <p class="messages">{{message}}</p>
+  {% endfor %}
+   
+   <div class="container">
     <form action="" method="post" enctype='multipart/form-data'>
         {% csrf_token %}
-        {% for field in form  %}
+        
     
-        <label for="">{{field.name}}</label>
-        {{field}}
+        <label for="">Email</label>
+        {{form.email}}
+
+        <label for="">Name</label>
+        {{form.email}}
+
+        <label for="">Password</label>
+        {{form.email}}
+
+        <label for="">Confirm Password</label>
+        {{form.email}}
     
-        {% endfor %}
-        <br>
-        <input type="Submit">
+        
+        
+        <button>Submit</button>
     </form>
-    <p>Already have a account <a href="{% url 'login' %}">login</a></p>
+    <p class='footers'>Already have a account? <a href="{% url 'login' %}">login</a></p>
+   </div>
 </body>
 </html>
