@@ -62,7 +62,7 @@ def signup(request):
 
             return redirect('login')
         else:
-            messages.error(request,'Passwords you entered are not same')
+            messages.error(request,"The two password fields didn’t match.")
    
             
 
@@ -106,7 +106,7 @@ def loginpage(request):
 
         if user is not None:
             login(request,user)
-            messages.success(request,'login success')
+            # messages.success(request,'login success')
             return redirect('/')
         messages.error(request,'Username or password is incorrect')
           
@@ -119,6 +119,8 @@ def logoutfunc(request):
     user=request.user
     if user.is_authenticated:
         logout(request)
+        messages.success(request,'logout success')
+
         return redirect('login')
 
 
